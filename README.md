@@ -1,2 +1,2 @@
 # event-interval-trigger
-A library to provide intervaal triggering without pausing a thread.
+A library to provide interval triggering without pausing a thread.
