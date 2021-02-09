@@ -18,8 +18,8 @@ void EventIntervalTrigger::stop() {
 
 bool EventIntervalTrigger::hasElapsed(std::chrono::microseconds currentTime) {
     if (running) {
-        std::chrono::microseconds nextTrigger = startTime + interval * (eventCounter + 1);
-        if ((eventCounter == 0) || (currentTime >= nextTrigger)) {
+        std::chrono::microseconds nextTrigger = startTime + interval * eventCounter;
+        if (currentTime >= nextTrigger) {
             eventCounter++;
             return true;
         }
