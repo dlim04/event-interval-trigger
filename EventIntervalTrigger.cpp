@@ -4,13 +4,7 @@
 
 #include "EventIntervalTrigger.h"
 
-using namespace std::literals;
-
-EventIntervalTrigger::EventIntervalTrigger(std::chrono::microseconds interval) : interval(interval) {
-    EventIntervalTrigger::startTime = 0ms;
-    running = false;
-    eventCounter = 0;
-}
+EventIntervalTrigger::EventIntervalTrigger(std::chrono::microseconds interval) : interval(interval) {}
 
 void EventIntervalTrigger::start(std::chrono::microseconds currentTime) {
     startTime = currentTime;

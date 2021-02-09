@@ -7,6 +7,8 @@
 
 #include <chrono>
 
+using namespace std::chrono_literals;
+
 /**
  * A timer that allows events to be triggered without pausing a thread. This timer accounts for processing time to
  * provide regular intervals. Provides up to microsecond precision.
@@ -51,10 +53,10 @@ public:
     void setInterval(std::chrono::microseconds interval);
 
 private:
-    std::chrono::microseconds startTime;
+    std::chrono::microseconds startTime = 0ms;
     std::chrono::microseconds interval;
-    bool running;
-    long long eventCounter;
+    bool running = false;
+    long long eventCounter = 0;
 };
 
 #endif //PROFESSIONAL_ENGINEERING_COURSEWORK_EVENTINTERVALTRIGGER_H
