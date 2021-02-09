@@ -12,6 +12,12 @@ void EventIntervalTrigger::start(std::chrono::microseconds currentTime) {
     eventCounter = 0;
 }
 
+void EventIntervalTrigger::startNext(std::chrono::microseconds currentTime) {
+    startTime = currentTime;
+    running = true;
+    eventCounter = 1;
+}
+
 void EventIntervalTrigger::stop() {
     running = false;
 }
