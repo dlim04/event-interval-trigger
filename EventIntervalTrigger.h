@@ -22,7 +22,7 @@ public:
     explicit EventIntervalTrigger(std::chrono::microseconds interval);
 
     /**
-     * Start the timer.
+     * Start the timer. Function also can be used to restart the timer. Once started first trigger is immediate.
      * @param currentTime - The current time between as a duration (eg. std::chrono::microseconds,
      *                      std::chrono::milliseconds, std::chrono::seconds... lower precision may result in random
      *                      interval for first trigger)

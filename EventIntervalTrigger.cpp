@@ -15,11 +15,11 @@ EventIntervalTrigger::EventIntervalTrigger(std::chrono::microseconds interval) :
 void EventIntervalTrigger::start(std::chrono::microseconds currentTime) {
     startTime = currentTime;
     running = true;
+    eventCounter = 0;
 }
 
 void EventIntervalTrigger::stop() {
     running = false;
-    eventCounter = 0;
 }
 
 bool EventIntervalTrigger::hasElapsed(std::chrono::microseconds currentTime) {
