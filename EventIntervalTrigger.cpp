@@ -17,7 +17,7 @@ void EventIntervalTrigger::start(std::chrono::microseconds currentTime) {
     running = true;
 }
 
-void EventIntervalTrigger::pause() {
+void EventIntervalTrigger::stop() {
     running = false;
     eventCounter = 0;
 }

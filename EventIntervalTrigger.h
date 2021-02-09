@@ -30,9 +30,9 @@ public:
     void start(std::chrono::microseconds currentTime);
 
     /**
-     * Pause the timer. When the timer is paused hasElapsed() will always return false.
+     * Stops the timer. When the timer is paused hasElapsed() will always return false.
      */
-    void pause();
+    void stop();
 
     /**
      * Checks whether the timer should be triggered.
